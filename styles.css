@@ -136,8 +136,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .nav-logo img {
-  height: 48px;
+  height: 64px;
   width: auto;
+  background: rgba(255,255,255,0.92);
+  border-radius: 8px;
+  padding: 4px 10px;
 }
 
 .nav-links {
@@ -231,6 +234,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 6px 14px;
   border-radius: 20px;
   margin-bottom: 24px;
+}
+
+.hero-company {
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  color: rgba(255,255,255,.9);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--rust);
+  padding-left: 14px;
 }
 
 .hero h1 {
