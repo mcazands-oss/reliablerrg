@@ -58,12 +58,7 @@ if (form) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
-    // If formspree action is still the placeholder, prevent real submission and show success
-    if (form.action.includes('YOUR_FORMSPREE_ID')) {
-      e.preventDefault();
-      showSuccess();
-      return;
-    }
+
 
     // Real formspree submission — let the browser handle it normally,
     // but intercept with fetch for a nicer in-page success experience
