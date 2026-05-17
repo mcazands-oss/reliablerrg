@@ -59,7 +59,7 @@ if (form) {
     submitBtn.textContent = 'Sending…';
 
     // If formspree action is still the placeholder, prevent real submission and show success
-    if (form.action.includes('REPLACE_ME')) {
+    if (form.action.includes('YOUR_FORMSPREE_ID')) {
       e.preventDefault();
       showSuccess();
       return;

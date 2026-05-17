@@ -187,8 +187,9 @@
           <form
             class="contact-form"
             id="contactForm"
-            action="https://usebasin.com/f/REPLACE_ME"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
             method="POST"
+            novalidate
           >
             <div class="form-row">
               <div class="form-group">
@@ -220,10 +221,15 @@
               <textarea id="message" name="message" rows="4" placeholder="Describe the damage, project scope, or any questions you have…"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              Send My Request
+              <span class="btn-text">Send My Request</span>
             </button>
             <p class="form-note">&#10003; No spam. Your info is only used to contact you about your estimate.</p>
           </form>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="success-icon">✓</div>
+            <h4>Thank You!</h4>
+            <p>We've received your request. Scott will reach out within one business day.</p>
+          </div>
         </div>
       </div>
     </section>
