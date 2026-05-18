@@ -1,0 +1,12 @@
+{
+  "name": "reliablerrg",
+  "version": "1.0.0",
+  "description": "Reliable Roofing Restoration & Glass website",
+  "main": "index.html",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

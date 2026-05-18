@@ -187,7 +187,6 @@
           <form
             class="contact-form"
             id="contactForm"
-            action="https://usebasin.com/f/051537aee7ee"
             method="POST"
             novalidate
           >
@@ -216,9 +215,21 @@
                 <option value="other">Other / Not Sure</option>
               </select>
             </div>
+            <!-- Honeypot field (hidden from users) -->
+            <input
+              type="text"
+              id="website_url"
+              name="website_url"
+              style="display: none; position: absolute; left: -9999px;"
+              tabindex="-1"
+              autocomplete="off"
+            />
             <div class="form-group">
               <label for="message">Tell Us About Your Project</label>
               <textarea id="message" name="message" rows="4" placeholder="Describe the damage, project scope, or any questions you have…"></textarea>
+            </div>
+            <div id="formError" class="form-error" style="display: none; color: #ef4444; padding: 12px; background: rgba(239, 68, 68, 0.1); border-radius: 6px; margin-bottom: 16px;">
+              <p id="errorText"></p>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
               <span class="btn-text">Send My Request</span>
@@ -267,5 +278,59 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Handle form submission
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+    const errorText = document.getElementById('errorText');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Hide previous messages
+      formSuccess.style.display = 'none';
+      formError.style.display = 'none';
+      
+      // Disable button
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="btn-text">Sending...</span>';
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        roofType: document.getElementById('roofType').value,
+        message: document.getElementById('message').value,
+        website_url: document.getElementById('website_url').value
+      };
+      
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          formSuccess.style.display = 'block';
+          form.reset();
+        } else {
+          errorText.textContent = data.message || 'Something went wrong. Please try again.';
+          formError.style.display = 'block';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        errorText.textContent = 'Network error. Please try calling (903) 275-5510.';
+        formError.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="btn-text">Send My Request</span>';
+      }
+    });
+  </script>
 </body>
 </html>
