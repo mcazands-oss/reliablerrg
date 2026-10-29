@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reliable Roofing Blog — Weekly tips on roofing, insurance claims, and storm damage from Scott Karraker." />
+  <title>Roofing Blog | Reliable Roofing Restoration & Glass</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .blog-header {
+      margin-bottom: 48px;
+      padding-top: 40px;
+    }
+    .blog-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 24px;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+      margin-bottom: 24px;
+    }
+    .blog-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .blog-content {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .blog-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 36px 0 16px;
+    }
+    .blog-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 28px 0 12px;
+    }
+    .blog-content p {
+      margin-bottom: 16px;
+    }
+    .blog-content ul, .blog-content ol {
+      margin: 16px 0 16px 24px;
+    }
+    .blog-content li {
+      margin-bottom: 10px;
+    }
+    .blog-content strong {
+      color: var(--rust);
+      font-weight: 700;
+    }
+    .blog-content em {
+      color: var(--gray-700);
+    }
+    .blog-cta {
+      background: var(--rust);
+      color: var(--white);
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      margin: 40px 0;
+      text-align: center;
+    }
+    .blog-cta a {
+      color: var(--white);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    .blog-list {
+      display: grid;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    .blog-post-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .blog-post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .blog-post-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.3rem;
+    }
+    .blog-post-date {
+      font-size: 0.85rem;
+      color: var(--rust);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .blog-post-excerpt {
+      color: var(--gray-700);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .blog-post-link {
+      display: inline-block;
+      color: var(--rust);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 2px solid var(--rust);
+      transition: all var(--transition);
+    }
+    .blog-post-link:hover {
+      border-bottom-color: var(--rust-dark);
+      color: var(--rust-dark);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--rust);
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: all var(--transition);
+    }
+    .back-link:hover {
+      gap: 12px;
+      color: var(--rust-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAV -->
+  <header class="nav-wrapper" id="top">
+    <nav class="nav container">
+      <a href="../#top" class="nav-logo">
+        <img src="../logo.png" alt="Reliable Roofing Restoration & Glass logo" height="52" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../#services">Services</a></li>
+        <li><a href="../#about">About</a></li>
+        <li><a href="./">Blog</a></li>
+        <li><a href="../#insurance">Insurance</a></li>
+        <li><a href="../#contact" class="nav-cta">Free Estimate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="blog-container">
+      <a href="./" class="back-link" id="backLink" style="display: none;">← All Posts</a>
+      
+      <div id="blogListView">
+        <div class="blog-header">
+          <h1>Roofing Tips & Insurance Advice</h1>
+          <p style="font-size: 1.1rem; color: var(--gray-700);">Weekly insights from Scott on roofing maintenance, storm damage, and maximizing your insurance claim.</p>
+        </div>
+        <div class="blog-list" id="postsList"></div>
+      </div>
+
+      <div id="blogPostView" style="display: none;">
+        <a href="./" class="back-link">← All Posts</a>
+        <article class="blog-header" id="postHeader"></article>
+        <div class="blog-content" id="postContent"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="../logo.png" alt="Reliable Roofing Restoration & Glass" height="44" />
+        <p>East Texas Roofing Done Right.<br />Serving Gun Barrel City &amp; surrounding areas.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Quick Links</strong>
+        <ul>
+          <li><a href="../#services">Services</a></li>
+          <li><a href="../#about">About Us</a></li>
+          <li><a href="./">Blog</a></li>
+          <li><a href="../#insurance">Insurance Claims</a></li>
+          <li><a href="../#contact">Free Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <strong>Contact</strong>
+        <p>247 Loving Lane<br />Gun Barrel City, TX</p>
+        <p><a href="tel:9032755510">(903) 275-5510</a></p>
+        <p>Licensed &amp; Insured</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Reliable Roofing Restoration &amp; Glass. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    // Blog data
+    const blogPosts = [];
+
+    // Load posts from blog-data.json
+    async function loadPosts() {
+      try {
+        const response = await fetch('./blog-data.json');
+        const data = await response.json();
+        blogPosts.push(...data.posts);
+        renderBlogList();
+      } catch (error) {
+        console.error('Error loading blog posts:', error);
+      }
+    }
+
+    // Render blog list
+    function renderBlogList() {
+      const postsList = document.getElementById('postsList');
+      postsList.innerHTML = '';
+
+      if (blogPosts.length === 0) {
+        postsList.innerHTML = '<p style="text-align: center; color: var(--gray-700); padding: 40px;">New posts coming soon. Check back next Tuesday.</p>';
+        return;
+      }
+
+      blogPosts.forEach(post => {
+        const date = new Date(post.publishDate);
+        const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        
+        const card = document.createElement('div');
+        card.className = 'blog-post-card';
+        card.innerHTML = `
+          <div class="blog-post-date">${formattedDate}</div>
+          <h3>${post.title}</h3>
+          <p class="blog-post-excerpt">${post.excerpt}</p>
+          <a href="#post-${post.id}" class="blog-post-link" onclick="viewPost(${post.id}); return false;">Read More →</a>
+        `;
+        postsList.appendChild(card);
+      });
+    }
+
+    // View individual post
+    function viewPost(postId) {
+      const post = blogPosts.find(p => p.id === postId);
+      if (!post) return;
+
+      const date = new Date(post.publishDate);
+      const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      const postHeader = document.getElementById('postHeader');
+      postHeader.innerHTML = `
+        <h1>${post.title}</h1>
+        <div class="blog-meta">
+          <div class="blog-meta-item">📅 ${formattedDate}</div>
+          <div class="blog-meta-item">✍️ Scott Karraker</div>
+        </div>
+      `;
+
+      const postContent = document.getElementById('postContent');
+      postContent.innerHTML = post.content;
+
+      // Add call-to-action at the end
+      const cta = document.createElement('div');
+      cta.className = 'blog-cta';
+      cta.innerHTML = `<p>Ready to protect your roof? <a href="../#contact">Request a free estimate</a> or call <a href="tel:9032755510">(903) 275-5510</a></p>`;
+      postContent.appendChild(cta);
+
+      // Show post view, hide list view
+      document.getElementById('blogListView').style.display = 'none';
+      document.getElementById('blogPostView').style.display = 'block';
+      document.getElementById('backLink').style.display = 'inline-flex';
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    // Back to list
+    document.getElementById('backLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('blogListView').style.display = 'block';
+      document.getElementById('blogPostView').style.display = 'none';
+      document.getElementById('backLink').style.display = 'none';
+      window.scrollTo(0, 0);
+    });
+
+    // Initialize
+    loadPosts();
+  </script>
+</body>
+</html>
