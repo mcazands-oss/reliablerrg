@@ -1,0 +1,19 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Coming Soon",
+      "description": "First Reliable Roofing vlog episode coming this week",
+      "publishDate": null,
+      "youtubeUrl": null,
+      "thumbnail": null,
+      "duration": null
+    }
+  ],
+  "schedule": {
+    "publishDay": "Tuesday",
+    "publishTime": "9:00 AM",
+    "timezone": "Central Time (CT)"
+  },
+  "lastUpdated": "2026-10-29"
+}
