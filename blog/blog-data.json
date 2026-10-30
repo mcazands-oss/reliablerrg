@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "id": 2,
+      "title": "Fall Roof Maintenance: 5 Things to Check Before Winter",
+      "excerpt": "Fall is the best time to prepare your roof for winter storms. Here are the five things you need to check now to avoid expensive repairs later.",
+      "publishDate": "2026-11-04",
+      "author": "Scott Karraker",
+      "content": "<h2>Why Fall Maintenance Matters</h2><p>Winter in East Texas might not mean snow, but it means ice, wind, and water damage. By October, storms have already beaten up a lot of roofs, and if you don't catch the damage now, you're looking at leaks, rot, and costly repairs come January.</p><p>I always tell my customers: fix it in the fall, or pay for it in the winter. It's that simple.</p><h2>The 5 Things to Check</h2><h3>1. Shingles and Flashing</h3><p>Walk around your roof (or have someone do it for you). Look for:</p><ul><li>Missing or damaged shingles—even one is a problem</li><li>Curled or cracked shingles</li><li>Flashing that's loose or separated from the roof (around vents, chimneys, skylights)</li></ul><p>Flashing is where most leaks start. If it's not sealed tight, water will find its way in.</p><h3>2. Gutters and Downspouts</h3><p>Clean out your gutters. I mean really clean them. Leaves and debris clog gutters, water backs up, and next thing you know you've got water in the attic or under the siding.</p><p>While you're at it, check that downspouts are directing water at least 4-6 feet away from your foundation.</p><h3>3. Roof Valleys</h3><p>The valleys are where two roof planes meet—they're the highways for water running off your roof. Make sure they're clear of leaves and debris. If water gets blocked there, it has nowhere to go but into your house.</p><h3>4. Vents and Penetrations</h3><p>Every time something pokes through your roof—a vent pipe, an antenna, a skylight—that's a potential leak point. Check:</p><ul><li>Rubber boots around vent pipes (they dry out and crack)</li><li>Caulk around flashing is still intact</li><li>No gaps or separations</li></ul><h3>5. The Attic</h3><p>Go up there with a flashlight. Look for:</p><ul><li>Water stains on the wood</li><li>Mold or mildew (dark spots on rafters)</li><li>Daylight coming through (if you can see light, water can get in)</li></ul><p>The attic tells you everything. If there are stains up there, the damage started weeks or months ago.</p><h2>What to Do If You Find Problems</h2><p>Small repairs now are cheap. Big repairs after water damage is not.</p><p>If you find damaged shingles, loose flashing, or any signs of water, call us for an inspection. Most fall repairs take a day or two and cost way less than waiting until you've got rotted wood and mold.</p><h2>Bottom Line</h2><p>Fall maintenance takes a couple of hours and can save you thousands. It's the best investment you can make in your roof.</p><p>If you want a professional to do the inspection—and honestly, I recommend it if you're not comfortable on a roof—we'll come out, walk it with you, and tell you exactly what needs fixing.</p><p>Don't wait. Winter's coming.</p>"
+    },
+    {
       "id": 1,
       "title": "Why Your Insurance Adjuster Might Be Lowballing You",
       "excerpt": "Your insurance adjuster doesn't work for you—they work for the insurance company. Here's how to protect yourself and maximize your claim.",
@@ -14,5 +22,5 @@
     "publishTime": "9:00 AM",
     "timezone": "Central Time (CT)"
   },
-  "lastUpdated": "2026-10-29"
+  "lastUpdated": "2026-10-30"
 }
