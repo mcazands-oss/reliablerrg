@@ -756,6 +756,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gray-700);
 }
 
+/* ===== FLYER SECTION ===== */
+.flyer-section {
+  background: var(--off-white);
+  padding: 40px 0;
+}
+
+.flyer-link {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.flyer-link:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 36px rgba(0,0,0,.2);
+}
+
+.flyer-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .about-inner,
